@@ -1,0 +1,8 @@
+numpy
+flask
+pickle
+neattext
+sklearn
+seaborn
+pandas
+numpy
