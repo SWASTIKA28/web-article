@@ -22,9 +22,9 @@ def predict():
     # final_features = [np.array(int_features)]
     prediction = pipe_lr.predict(textinput)
 
-    output = prediction
+    output = prediction[0]
 
-    return render_template('index.html', prediction_text='Sentiment Analysis of Quote {}'.format(output))
+    return render_template('result.html', prediction_text='{}'.format(output))
 
 # @app.route('/predict_api',methods=['POST'])
 # def predict_api():
