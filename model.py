@@ -19,7 +19,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score,classification_report,confusion_matrix
 
 # Load Dataset
-df = pd.read_csv("/content/emotion_dataset_raw.csv")
+df = pd.read_csv("data/emotion_dataset_raw.csv")
 
 df.head()
 
@@ -60,6 +60,12 @@ pipe_lr
 pipe_lr.score(x_test,y_test)
 
 # Make A Prediction
-ex1 = "I only exist when people need something."
+# ex1 = "I only exist when people need something."
 
-pipe_lr.predict([ex1])
+pipe_lr.predict()
+
+# Save Model & Pipeline
+import joblib
+pipeline_file = open("emotion_classifier.pkl","wb")
+joblib.dump(pipe_lr,pipeline_file)
+pipeline_file.close()
