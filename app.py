@@ -24,7 +24,11 @@ def predict():
 
     output = prediction[0]
 
+ 
     return render_template('result.html', prediction_text='{}'.format(output))
+
+     
+
 
 # @app.route('/predict_api',methods=['POST'])
 # def predict_api():
